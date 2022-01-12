@@ -48,10 +48,7 @@ def process_file(path, filename):
     
 
 def detect_object(path, filename):    
-    CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
-        "bottle", "bus", "car", "cat", "chair", "cow", "diningtable",
-        "dog", "horse", "motorbike", "person", "pottedplant", "sheep",
-        "sofa", "train", "tvmonitor"]
+    CLASSES = ["Neutral", "Happy", "Sad", "Angry", "Surprise", "Fear"]
     COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
     prototxt="ssd/MobileNetSSD_deploy.prototxt.txt"
     model ="ssd/MobileNetSSD_deploy.caffemodel"
